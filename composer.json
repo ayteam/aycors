@@ -1,17 +1,17 @@
 {
     "name": "aycors/tp-cors",
     "description": "thinkphp5 for cors",
+    "homepage": "https://github.com/ayteam/aycors",
     "keywords": [
         "thinkphp5",
         "cors",
         "Access-Control-Allow-Origin"
     ],
     "license": "MIT",
-	"type": "library",
     "authors": [
         {
-            "name": "anyuan",
-            "email": "1662853651@qq.com"
+            "name": "ayteam",
+            "email": "17705211605@163.com"
         }
     ],
     "require": {
