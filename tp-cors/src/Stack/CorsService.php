@@ -1,6 +1,6 @@
 <?php
 
-namespace Aycors;
+namespace Aycors\Stack;
 
 use think\Config;
 use think\Request;
