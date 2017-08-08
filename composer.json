@@ -25,6 +25,9 @@
         "files": [
             "src/helper.php"
         ]
-    }
+    },
+    "post-install-cmd": [
+        "Aycors\\ComposerScripts::sendConfig"
+    ]
 
 }
