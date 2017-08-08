@@ -6,7 +6,7 @@
     "keywords": [
         "thinkphp5",
         "cors",
-        "Access-Control-Allow-Origin"
+        "Cross-origin resource sharing"
     ],
     "license": "MIT",
     "authors": [

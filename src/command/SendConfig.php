@@ -21,7 +21,7 @@ class SendConfig extends Command
     public function execute(Input $input, Output $output)
     {
         //获取默认配置文件
-        $content = file_get_contents(VENDOR_PATH .'aycors/tp-cors/src/config.php');
+        $content = file_get_contents(VENDOR_PATH .'ayteam/aycors/src/config.php');
         $configPath = CONF_PATH.'extra/';
         $configFile = $configPath.'cors.php';
         //判断目录是否存在
