@@ -20,9 +20,10 @@
     "autoload": {
         "psr-4": {
             "Aycors\\": "src/"
-        }
-    },
-    "post-install-cmd": [
-        "Aycors\\ComposerScripts::sendConfig"
-    ]
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    }
+
 }
