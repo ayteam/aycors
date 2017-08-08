@@ -1,0 +1,28 @@
+{
+    "name": "aycors",
+    "description": "thinkphp5 for cors",
+    "keywords": [
+        "thinkphp5",
+        "cors",
+        "Access-Control-Allow-Origin"
+    ],
+    "license": "MIT",
+	"type": "library",
+    "authors": [
+        {
+            "name": "anyuan",
+            "email": "1662853651@qq.com"
+        }
+    ],
+    "require": {
+        "php":">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Aycors\\": "src/"
+        }
+    },
+    "post-install-cmd": [
+        "Aycors\\ComposerScripts::sendConfig"
+    ]
+}
