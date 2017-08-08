@@ -1,6 +1,7 @@
 {
     "name": "aycors/tp-cors",
     "description": "thinkphp5 for cors",
+    "type":"library",
     "homepage": "https://github.com/ayteam/aycors",
     "keywords": [
         "thinkphp5",
