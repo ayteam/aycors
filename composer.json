@@ -15,7 +15,6 @@
             "email": "17705211605@163.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "php":">=5.4.0"
     },
