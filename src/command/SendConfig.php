@@ -35,7 +35,7 @@ class SendConfig extends Command
         if (false === file_put_contents($configFile, $content)) {
             throw new \RuntimeException(sprintf('The config file "%s" could not be written to "%s"', $configFile,$configPath));
         }
-        $output->writeln('create wechat config ok');
+        $output->writeln('create cors.php ok');
     }
 
 }
