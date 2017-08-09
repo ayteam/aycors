@@ -12,15 +12,35 @@ use think\Response;
 class CorsService
 {
     private $options;
+    protected static $instance;
 
-    public function __construct(array $options = array())
+    private function __construct()
     {
-        $this->options = $this->normalizeOptions($options);
+        $this->options = $this->normalizeOptions();
     }
 
-    private function normalizeOptions(array $options = array())
+    /**
+     * @return static
+     * get:
+     */
+    public static function instance()
     {
-        $options += Config::get('cors');
+        if (!(self::$instance instanceof self)) {
+            self::$instance = new self();
+        }
+        return self::$instance;
+    }
+
+    private function normalizeOptions()
+    {
+        $options = Config::get('cors') + array(
+                'supportsCredentials' => true,
+                'allowedOrigins' => ['*'],
+                'allowedHeaders' => ['*'],
+                'allowedMethods' => ['*'],
+                'exposedHeaders' => [],
+                'maxAge' => 0,
+            );
 
         // normalize array('*') to true
         if (in_array('*', $options['allowedOrigins'])) {

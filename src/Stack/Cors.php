@@ -8,13 +8,15 @@ use think\Response;
 class Cors
 {
 
-    public static function json($data = [], $code = 200,$header = [], $options = [])
+    protected $corsService;
+
+    public static function json($data = [], $code = 200)
     {
         $request = Request::instance();
-        $corsService = new CorsService($options);
+        $corsService = CorsService::instance();
 
         if (!$corsService->isCorsRequest($request)) {
-            return Response::create($data, 'json', $code, $header, $options);
+            return Response::create($data, 'json', $code );
         }
 
         if ($corsService->isPreflightRequest($request)) {
@@ -25,10 +27,9 @@ class Cors
             return new Response('Not allowed.', 403);
         }
 
-        $response = Response::create($data, 'json', $code, $options);
+        $response = Response::create($data, 'json',$code);
         return $corsService->addActualRequestHeaders($response, $request);
 
     }
-
 
 }
