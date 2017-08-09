@@ -26,4 +26,4 @@ php think cors:config
 return Cors::json(['code'=>1]);
 ```
 如果有不懂的，可以下面评论。
-也欢迎大家在github提交issue和PR
+
