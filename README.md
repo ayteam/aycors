@@ -23,7 +23,7 @@ php think cors:config
 具体参考 [跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 
 ```php
-return Cors::json(['code'=>1]);
+return Cors::json(['code'=>1]); // 替代 return json(['code'=>1]);
 ```
-如果有不懂的，可以下面评论。
+
 
